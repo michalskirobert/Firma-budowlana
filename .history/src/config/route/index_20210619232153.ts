@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { MENU } from "@utils/routes";
 
-const Homepage = lazy(() => import("@components/pages/home"));
+const Homepage = lazy(() => import("@components/homepage"));
 
 export const ROUTE_PATHS: readonly any[] = Object.freeze([
   {
