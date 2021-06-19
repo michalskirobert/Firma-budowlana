@@ -6,6 +6,7 @@ import { NavMenu } from "./components/layout/nav";
 import { Footer } from "@components/layout/footer";
 
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = (): JSX.Element => {
   return (

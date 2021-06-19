@@ -58,8 +58,9 @@ const Hero = (): JSX.Element => {
           alt={item.altText}
           style={{
             width: "100vw",
-            maxHeight: "calc(100vh - 50vh)",
+            maxHeight: "calc(100vh - 40vh)",
             backgroundSize: "cover",
+            backgroundAttachment: "fixed",
             backgroundRepeat: "no-repeat",
           }}
         />
