@@ -1,9 +1,13 @@
-import { lazy } from "react";
+import React, { lazy, LazyExoticComponent } from "react";
 import { MENU } from "@utils/routes";
 
 const Homepage = lazy(() => import("@components/pages/home"));
 
-export const ROUTE_PATHS: readonly any[] = Object.freeze([
+export const ROUTE_PATHS: readonly {
+  exact?: boolean;
+  path: string;
+  component: LazyExoticComponent<React.ComponentType<string>>;
+}[] = Object.freeze([
   {
     exact: true,
     component: Homepage,
@@ -15,6 +19,6 @@ export const ROUTE_PATHS: readonly any[] = Object.freeze([
   },
   {
     component: Homepage,
-    path: MENU.NAV_MENU_PATHS,
+    path: MENU.NAV_MENU_PATHS.CONTACT_PAGE,
   },
 ]);

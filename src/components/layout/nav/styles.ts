@@ -7,7 +7,6 @@ export const StyledLink = styled(NavLink)`
 
 export const StyledCollapse = styled(Collapse)`
   display: flex;
-  width: 100vw;
   justify-content: center;
 `;
 
