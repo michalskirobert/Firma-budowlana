@@ -18,6 +18,7 @@ export const NavMenu = (): JSX.Element => {
             flexFlow: "wrap row",
             justifyContent: "flex-end",
             marginTop: "15px",
+            marginBottom: "15px",
           }}
         >
           {contactItems.map(
