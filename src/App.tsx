@@ -6,9 +6,6 @@ import { NavMenu } from "./components/layout/nav";
 import { Footer } from "@components/layout/footer";
 import PageNotFound from "@components/pages/not-found";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const App = (): JSX.Element => {
   return (
     <Router>
