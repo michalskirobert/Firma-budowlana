@@ -3,64 +3,103 @@ import React, { Component } from "react";
 import first from "@assets/images/hero/1.jpg";
 import second from "@assets/images/hero/2.jpg";
 import third from "@assets/images/hero/3.jpg";
-import Slider from "react-slick";
 
 const Hero = (): JSX.Element => {
-  const settings = {
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    appendDots: (dots) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-          position: "absolute",
-          bottom: "50px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
+  const [isReversed] = React.useState(false);
+  const [index, setIndex] = React.useState(0);
+  const data = [
+    {
+      title: "Nagłówek",
+      subtitle: "Pod tytuł",
+      imgURL: first,
+      content: "Treść",
+      currentId: 1,
+    },
+    {
+      title: "Nagłówek",
+      subtitle: "Pod tytuł",
+      imgURL: second,
+      content: "Treść",
+      currentId: 2,
+    },
+    {
+      title: "Nagłówek",
+      subtitle: "Pod tytuł",
+      imgURL: third,
+      content: "Treść",
+      currentId: 3,
+    },
+  ];
+
+  data.map((item, index) => {
+    return (item["order"] = index);
+  });
+
+  const dataOrdered = isReversed ? data.reverse() : data;
+
+  const checkNumber = (number: number): void => {
+    if (number > data.length - 1) {
+      setIndex(0);
+    } else {
+      return setIndex(number);
+    }
   };
 
+  const getBanner = (id: number): void => {
+    return setIndex(id);
+  };
+
+  React.useEffect(() => {
+    const slider = setInterval(() => {
+      checkNumber(index + 1);
+    }, 3000);
+    return () => {
+      clearInterval(slider);
+    };
+    // eslint-disable-next-line
+  });
+
   return (
-    <Slider {...settings}>
-      <div>
-        <img
-          src={first}
-          style={{
-            width: "100vw",
-            height: "calc(100vh - 25vh)",
-            objectFit: "cover",
-          }}
-        />
+    <section className={"hero"} style={{ padding: "0" }}>
+      <div className={"hero__container"}>
+        <div className={"img__container"}>
+          {dataOrdered.map(({ title, subtitle, content, imgURL }, idx) => {
+            return (
+              <div key={idx}>
+                <img
+                  src={imgURL}
+                  alt={title}
+                  key={idx}
+                  className={`${index === idx ? "active" : "remove"}`}
+                />
+                <div
+                  className={`img__text ${index === idx ? "active" : "remove"}`}
+                >
+                  <h2 style={{ color: "#deb887" }}>{title}</h2>
+                  <h3>{subtitle}</h3>
+                  <p>{content}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className={"hero__content"}>
+          <div className={"hero__item"}>
+            <div className={"slidershow"}>
+              {dataOrdered.map((item, id: number) => {
+                return (
+                  <button
+                    key={id}
+                    className={`dot ${index === id && "active"}`}
+                    onClick={() => getBanner(id)}
+                  ></button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <img
-          src={second}
-          style={{
-            width: "100vw",
-            height: "calc(100vh - 25vh)",
-            objectFit: "cover",
-          }}
-        />
-      </div>
-      <div>
-        <img
-          src={third}
-          style={{
-            width: "100vw",
-            height: "calc(100vh - 25vh)",
-            objectFit: "cover",
-          }}
-        />
-      </div>
-    </Slider>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ export const NavMenu = (): JSX.Element => {
 
   return (
     <>
-      {width > 1200 && (
+      {width > 768 && (
         <div
           style={{
             display: "flex",
@@ -58,6 +58,23 @@ export const NavMenu = (): JSX.Element => {
                 </S.StyledLink>
               </NavItem>
             ))}
+            <div style={{ borderTop: "1px solid #111", marginTop: "15px" }}>
+              {width < 768 &&
+                contactItems.map(
+                  (
+                    {
+                      icon,
+                      value,
+                      name,
+                    }: { icon: string; value: string; name: string },
+                    idx: number
+                  ) => (
+                    <p key={idx}>
+                      {icon} {name}: {value}
+                    </p>
+                  )
+                )}
+            </div>
           </Nav>
         </S.StyledCollapse>
       </Navbar>
