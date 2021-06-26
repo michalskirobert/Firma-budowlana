@@ -11,34 +11,15 @@ import {
   Jumbotron,
 } from "reactstrap";
 import { MdArrowForward } from "react-icons/md";
+import { useHomepageContainer } from "./container";
 
 import { OFFERS_HELER } from "./utils";
 
 import Hero from "@components/layout/hero";
 import * as CONSTANTS from "@utils/constants";
 
-const info = [
-  {
-    title: "Tytuł",
-    subtitle: "Podtytuł",
-    content: "Wartość",
-    button: "Wartość przyciska ;)",
-  },
-  {
-    title: "Tytuł",
-    subtitle: "Podtytuł",
-    content: "Wartość",
-    button: "Wartość przyciska ;)",
-  },
-  {
-    title: "Tytuł",
-    subtitle: "Podtytuł",
-    content: "Wartość",
-    button: "Wartość przyciska ;)",
-  },
-];
-
 const Homepage = (): JSX.Element => {
+  const { INFO, HOME_PAGE_CARD } = useHomepageContainer();
   return (
     <>
       <section className="hero">
@@ -65,7 +46,7 @@ const Homepage = (): JSX.Element => {
       </section>
       <section>
         <CardGroup>
-          {info.map(({ title, subtitle, content, button }) => (
+          {INFO.map(({ title, subtitle, content, button }) => (
             <Card style={{ margin: "15px 15px 30px 15px" }}>
               <CardImg
                 top

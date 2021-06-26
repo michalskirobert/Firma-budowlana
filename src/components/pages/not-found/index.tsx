@@ -2,9 +2,9 @@ import React from "react";
 
 const PageNotFound = () => {
   return (
-    <section>
-      Przepraszamy, podana strona: "{window.location.pathname}" nie została
-      znaleziona
+    <section style={{ margin: "0 auto", maxWidth: "1200px" }}>
+      Przepraszamy, podana strona: "{window.location.pathname.replace("/", "")}"
+      nie została znaleziona
     </section>
   );
 };
