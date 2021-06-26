@@ -20,3 +20,12 @@ export const LOGO_SUBTITLE = "Firma remontowo budowlana";
 //Contact
 export const EMAIL = "Email";
 export const PHONE = "Numer telefonu";
+
+//Offer
+export const OFFER_HEADER = "Usługi remontowo - wykończeniowe";
+export const OFFER_SUBHEADER =
+  "Świadczymy kompleksowe wieloletnie doświadczenie w zakresie kompleksowych wykończeń wnętrz";
+export const OFFER_LIST = "Oferujemy";
+
+//Common
+export const SEE_MORE = "Zobacz więcej";

@@ -44,12 +44,12 @@ export const contactItems: readonly {
 }[] = Object.freeze([
   {
     name: C.PHONE,
-    value: "+51330005",
+    value: "+48 519 867 957",
     icon: <AiFillPhone />,
   },
   {
     name: C.EMAIL,
-    value: "example@domain.com",
+    value: "contact@buraczynscy.pl",
     icon: <AiFillMail />,
   },
 ]);

@@ -4,7 +4,6 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { ROUTE_PATHS } from "./config/route";
 import { NavMenu } from "./components/layout/nav";
 import { Footer } from "@components/layout/footer";
-import PageNotFound from "@components/pages/not-found";
 
 const App = (): JSX.Element => {
   return (
@@ -30,7 +29,6 @@ const App = (): JSX.Element => {
               />
             )
           )}
-          <Route path="*" component={PageNotFound} exact />
         </Switch>
         <Footer />
       </Suspense>

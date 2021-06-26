@@ -4,29 +4,31 @@ import first from "@assets/images/hero/1.jpg";
 import second from "@assets/images/hero/2.jpg";
 import third from "@assets/images/hero/3.jpg";
 
+import * as CONSTNATS from "@utils/constants";
+
 const Hero = (): JSX.Element => {
   const [isReversed] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const data = [
     {
-      title: "Nagłówek",
-      subtitle: "Pod tytuł",
+      title: "",
+      subtitle: "",
       imgURL: first,
-      content: "Treść",
+      content: "",
       currentId: 1,
     },
     {
-      title: "Nagłówek",
-      subtitle: "Pod tytuł",
+      title: "",
+      subtitle: "",
       imgURL: second,
-      content: "Treść",
+      content: "",
       currentId: 2,
     },
     {
-      title: "Nagłówek",
-      subtitle: "Pod tytuł",
+      title: "",
+      subtitle: "",
       imgURL: third,
-      content: "Treść",
+      content: "",
       currentId: 3,
     },
   ];

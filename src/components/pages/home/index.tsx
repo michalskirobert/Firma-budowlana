@@ -10,8 +10,12 @@ import {
   CardBody,
   Jumbotron,
 } from "reactstrap";
+import { MdArrowForward } from "react-icons/md";
+
+import { OFFERS_HELER } from "./utils";
 
 import Hero from "@components/layout/hero";
+import * as CONSTANTS from "@utils/constants";
 
 const info = [
   {
@@ -40,23 +44,24 @@ const Homepage = (): JSX.Element => {
       <section className="hero">
         <Hero />
       </section>
-      <section style={{ marginLeft: "50px" }}>
-        <div>
-          <Jumbotron>
-            <h1 className="display-3">Oferta</h1>
-            <p className="lead">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-              explicabo laudantium, harum mollitia dicta neque quibusdam non,
-              voluptate similique aperiam facilis quidem ad numquam optio
-              tempore et voluptates! Rem, similique?
-            </p>
-            <hr className="my-2" />
-            <p>Ceny</p>
-            <p className="lead">
-              <Button color="primary">Więcej szczegółów</Button>
-            </p>
-          </Jumbotron>
-        </div>
+      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "8px" }}>
+        <Jumbotron>
+          <h1 className="display-3">{CONSTANTS.OFFER}</h1>
+          <h2 className="lead">{CONSTANTS.OFFER_HEADER}</h2>
+          <hr className="my-2" />
+          <ul className="offer">
+            {OFFERS_HELER.map((offer) => (
+              <li>{offer}</li>
+            ))}
+          </ul>
+          <hr className="my-2" />
+          <p>
+            <MdArrowForward /> Zapraszamy Warszawa i okolice
+          </p>
+          <p>
+            <Button color="primary">{CONSTANTS.SEE_MORE}</Button>
+          </p>
+        </Jumbotron>
       </section>
       <section>
         <CardGroup>
