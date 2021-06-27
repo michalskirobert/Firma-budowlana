@@ -2,6 +2,7 @@ import React from "react";
 
 import { useNavigationContainer } from "./container";
 import { NavbarToggler, Navbar, Nav, NavItem } from "reactstrap";
+import Logo from "@assets/images/logo/logo.png";
 
 import * as S from "./styles";
 
@@ -47,7 +48,13 @@ export const NavMenu = (): JSX.Element => {
         </div>
       )}
       <Navbar color="warning" light expand="md">
-        <S.Logo href="/">Buraczyńscy</S.Logo>
+        <S.Logo href="/">
+          <img
+            src={Logo}
+            alt="logo"
+            style={{ maxWidth: "100%", height: "36px" }}
+          />
+        </S.Logo>
         <NavbarToggler onClick={toggleNav} />
         <S.StyledCollapse isOpen={isNavOpen} navbar>
           <Nav className="mr-auto" navbar>
