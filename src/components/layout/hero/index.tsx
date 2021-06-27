@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 import first from "@assets/images/hero/1.jpg";
 import second from "@assets/images/hero/2.jpg";
 import third from "@assets/images/hero/3.jpg";
-
-import * as CONSTNATS from "@utils/constants";
 
 const Hero = (): JSX.Element => {
   const [isReversed] = React.useState(false);

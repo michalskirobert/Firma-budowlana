@@ -19,7 +19,7 @@ import Hero from "@components/layout/hero";
 import * as CONSTANTS from "@utils/constants";
 
 const Homepage = (): JSX.Element => {
-  const { INFO, HOME_PAGE_CARD } = useHomepageContainer();
+  const { INFO } = useHomepageContainer();
   return (
     <>
       <section className="hero">

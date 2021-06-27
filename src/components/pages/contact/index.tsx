@@ -7,56 +7,41 @@ import {
   Button,
 } from "reactstrap";
 
-import contact from "@assets/images/contact/contact.jpg";
+import { contactItems, contactInputsHelper } from "./utils";
 
-import { AiOutlineMail, MdPerson, AiFillPhone } from "react-icons/all";
 import * as S from "./styles";
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   return (
-    <section style={{ margin: "0 auto", maxWidth: "1200px", padding: "15px" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "25px" }}>Kontakt</h2>
+    <S.ContactSection>
+      <S.Title>Kontakt</S.Title>
       <S.Container>
-        <S.ImageContainer>
-          <img src={contact} alt="empty yet :)" />
-        </S.ImageContainer>
+        <S.DescriptionContainer>
+          {contactItems.map(({ title, content, icon }) => (
+            <S.DescriptionGroup key={content}>
+              {icon}
+              <div>
+                <S.DescriptionSubHeadling>{title}</S.DescriptionSubHeadling>
+                <S.DescriptionContent>{content}</S.DescriptionContent>
+              </div>
+            </S.DescriptionGroup>
+          ))}
+        </S.DescriptionContainer>
         <S.InputContainer>
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>
-                <MdPerson style={{ height: "35px" }} />
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Np. Janusz Kowalski" type="text" />
-          </InputGroup>
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>
-                <AiOutlineMail style={{ height: "35px" }} />
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Np. Kowalski@gmail.com" type="email" />
-          </InputGroup>
-          <InputGroup
-            style={{
-              maxWidth: "250px",
-              objectFit: "cover",
-            }}
-          >
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>
-                <AiFillPhone style={{ height: "35px" }} />
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Np. 555-888-555" type="tel" />
-          </InputGroup>
-          <InputGroup>
-            <Input placeholder="Twoja wiadomość" type="textarea" />
-          </InputGroup>
-          <Button>Wyślij</Button>
+          {contactInputsHelper.map(({ type, icon, placeholder }) => (
+            <InputGroup>
+              {icon && (
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>{icon}</InputGroupText>
+                </InputGroupAddon>
+              )}
+              <Input {...{ type, placeholder }} key={placeholder} />
+            </InputGroup>
+          ))}
+          <Button {...{ type: "button", color: "warning" }}>Wyślij</Button>
         </S.InputContainer>
       </S.Container>
-    </section>
+    </S.ContactSection>
   );
 };
 

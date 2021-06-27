@@ -5,18 +5,28 @@
 ::before {
   box-sizing: border-box;
   font-family: $font_family_main !important;
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  outline: none;
+section:not(.hero) {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 ul.offer {
   li {
     list-style: disc;
   }
+}
+
+p {
+  font-size: 1rem;
+}
+
+b {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }

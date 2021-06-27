@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Collapse, NavLink, NavbarBrand } from "reactstrap";
 
 export const StyledLink = styled(NavLink)`
-  color: dark-orange !important;
+  color: #402e32 !important;
 `;
 
 export const StyledCollapse = styled(Collapse)`

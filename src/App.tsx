@@ -8,8 +8,8 @@ import { Footer } from "@components/layout/footer";
 const App = (): JSX.Element => {
   return (
     <Router>
+      <NavMenu />
       <Suspense fallback={"Wczytywanie...."}>
-        <NavMenu />
         <Switch>
           {ROUTE_PATHS.map(
             (
