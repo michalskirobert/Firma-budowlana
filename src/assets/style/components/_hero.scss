@@ -90,6 +90,11 @@
               background-color: orange;
             }
           }
+          @supports (-webkit-touch-callout: none) {
+            .dot {
+              height: 30px;
+            }
+          }
           @media screen and (min-width: 1200px) {
             .dot:hover {
               background-color: orange;
