@@ -29,3 +29,5 @@ export const OFFER_LIST = "Oferujemy";
 
 //Common
 export const SEE_MORE = "Zobacz więcej";
+export const CONTACT = "Kontakt";
+export const SEND = "Wyślij";

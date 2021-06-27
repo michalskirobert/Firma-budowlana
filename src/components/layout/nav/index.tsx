@@ -51,8 +51,8 @@ export const NavMenu = (): JSX.Element => {
         <NavbarToggler onClick={toggleNav} />
         <S.StyledCollapse isOpen={isNavOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {navigationItems.map(({ name, link, icon }) => (
-              <NavItem>
+            {navigationItems.map(({ name, link, icon }, idx: number) => (
+              <NavItem key={idx}>
                 <S.StyledLink href={link}>
                   {icon} {name}
                 </S.StyledLink>

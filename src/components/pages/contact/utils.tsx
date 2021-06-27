@@ -43,18 +43,22 @@ export const contactInputsHelper: readonly {
   type: InputType | undefined;
   placeholder: string;
   icon?: ReactElement;
+  name: string;
 }[] = Object.freeze([
   {
+    name: "name",
     type: "text",
     placeholder: "Np. Jan Kowalski",
     icon: <MdPerson {...{ style: contactIconsSize }} />,
   },
   {
+    name: "email",
     type: "email",
     placeholder: "Np. jan.kowalski@gmail.com",
     icon: <AiOutlineMail {...{ style: contactIconsSize }} />,
   },
   {
+    name: "msg",
     type: "textarea",
     placeholder: "Twoja wiadomość...",
   },
