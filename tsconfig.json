@@ -32,7 +32,7 @@
   },
   "include": [
     "src",
-    "src/core/typings/index.d.ts"
+    "src/core/types/index.d.ts"
   ],
   "extends": "./tsconfig.paths.json"
 }

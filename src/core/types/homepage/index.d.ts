@@ -1,4 +1,4 @@
-export declare namespace Home {
+export declare namespace NHome {
   type S = string;
   type N = number;
   type B = boolean;

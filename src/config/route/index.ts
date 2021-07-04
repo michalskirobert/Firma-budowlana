@@ -4,6 +4,7 @@ import { MENU } from "@utils/routes";
 const Homepage = lazy(() => import("@components/pages/home"));
 const PageNotFound = lazy(() => import("@components/pages/not-found"));
 const Contact = lazy(() => import("@components/pages/contact"));
+const GalleryPage = lazy(() => import("@components/pages/gallery"));
 
 export const ROUTE_PATHS: readonly {
   exact?: boolean;
@@ -18,6 +19,10 @@ export const ROUTE_PATHS: readonly {
   {
     component: Contact,
     path: MENU.NAV_MENU_PATHS.CONTACT_PAGE,
+  },
+  {
+    component: GalleryPage,
+    path: MENU.NAV_MENU_PATHS.GALLERY_PAGE,
   },
   {
     component: PageNotFound,
