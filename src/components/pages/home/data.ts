@@ -1,3 +1,7 @@
+import doors from "@assets/images/stock/cent.jpg";
+import sink from "./../../../assets/images/gallery/20210613_141509_HDR.jpg";
+import toilet from "./../../../assets/images/gallery/20210613_141302.jpg";
+
 import * as CONSTANTS from "@utils/constants";
 
 export const INFO: readonly {
@@ -5,23 +9,27 @@ export const INFO: readonly {
   subtitle: string;
   content: string;
   button: string | null;
+  imgURL: string;
 }[] = [
   {
-    title: "Montaż drzwi",
+    title: CONSTANTS.DOOR_INSTALLATION,
     subtitle: "tekst",
     content: "tekst",
+    imgURL: doors,
     button: CONSTANTS.SEE_MORE,
   },
   {
-    title: "Montaż armatury",
+    title: CONSTANTS.FITTINGS_INSTALLATION,
     subtitle: "tekst",
     content: "tekst",
+    imgURL: sink,
     button: CONSTANTS.SEE_MORE,
   },
   {
-    title: "Montaż odpływu",
+    title: CONSTANTS.DRAIN_INSTALLATION,
     subtitle: "tekst",
     content: "tekst",
+    imgURL: toilet,
     button: CONSTANTS.SEE_MORE,
   },
 ];

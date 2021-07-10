@@ -1,27 +1,26 @@
-import image1 from "./../../../assets/images/gallery/20210613_141222_HDR.jpg";
-import image2 from "./../../../assets/images/gallery/20210613_141251.jpg";
-import image3 from "./../../../assets/images/gallery/20210613_141331.jpg";
-import image4 from "./../../../assets/images/gallery/20210613_141433.jpg";
-import image5 from "./../../../assets/images/gallery/20210613_141445.jpg";
-import image6 from "./../../../assets/images/gallery/20210613_141541_HDR.jpg";
-import image7 from "./../../../assets/images/gallery/20210613_141630.jpg";
-import image8 from "./../../../assets/images/gallery/20210613_141801.jpg";
-import image9 from "./../../../assets/images/gallery/20210613_142014.jpg";
-import image10 from "./../../../assets/images/gallery/20210613_142023.jpg";
-import image11 from "./../../../assets/images/gallery/20210613_142050.jpg";
-import image12 from "./../../../assets/images/gallery/20210613_142442.jpg";
-import image13 from "./../../../assets/images/gallery/20210613_142627.jpg";
-import image14 from "./../../../assets/images/gallery/20210613_142627.jpg";
-import image15 from "./../../../assets/images/gallery/20210613_142631.jpg";
-import image16 from "./../../../assets/images/gallery/20210613_142659.jpg";
-import image17 from "./../../../assets/images/gallery/20210613_142705.jpg";
-import image18 from "./../../../assets/images/gallery/20210613_142955.jpg";
-import image19 from "./../../../assets/images/gallery/20210613_143514.jpg";
-import image20 from "./../../../assets/images/gallery/20210613_143544.jpg";
-import image21 from "./../../../assets/images/gallery/20210613_143644.jpg";
-import image22 from "./../../../assets/images/gallery/20210613_144411.jpg";
-import image23 from "./../../../assets/images/gallery/20210613_144419.jpg";
-import image24 from "./../../../assets/images/gallery/20210613_144439.jpg";
+import image1 from "./../../../assets/images/gallery/20210319_095329_HDR.jpg";
+import image2 from "./../../../assets/images/gallery/20210430_130436.jpg";
+import image3 from "./../../../assets/images/gallery/20210430_130620_HDR.jpg";
+import image4 from "./../../../assets/images/gallery/20210430_130720.jpg";
+import image5 from "./../../../assets/images/gallery/20210613_141302.jpg";
+import image6 from "./../../../assets/images/gallery/20210613_141509_HDR.jpg";
+import image7 from "./../../../assets/images/gallery/20210613_141550.jpg";
+import image8 from "./../../../assets/images/gallery/20210613_142023.jpg";
+import image9 from "./../../../assets/images/gallery/20210613_142050.jpg";
+import image10 from "./../../../assets/images/gallery/20210613_142206.jpg";
+import image11 from "./../../../assets/images/gallery/20210613_142627.jpg";
+import image12 from "./../../../assets/images/gallery/20210613_142714.jpg";
+import image13 from "./../../../assets/images/gallery/20210613_143027.jpg";
+import image14 from "./../../../assets/images/gallery/20210613_142714.jpg";
+import image15 from "./../../../assets/images/gallery/20210613_143027.jpg";
+import image16 from "./../../../assets/images/gallery/20210613_143244.jpg";
+import image17 from "./../../../assets/images/gallery/20210613_143349.jpg";
+import image18 from "./../../../assets/images/gallery/20210613_143624.jpg";
+import image19 from "./../../../assets/images/gallery/20210613_143635.jpg";
+import image20 from "./../../../assets/images/gallery/IMG_20210414_120927.jpg";
+import image21 from "./../../../assets/images/gallery/IMG_20210415_140923.jpg";
+import image22 from "./../../../assets/images/gallery/IMG_20210426_141015.jpg";
+import image23 from "./../../../assets/images/gallery/IMG_20210513_151833.jpg";
 
 export const photos = [
   {
@@ -136,11 +135,6 @@ export const photos = [
   },
   {
     src: image23,
-    width: 1,
-    height: 1,
-  },
-  {
-    src: image24,
     width: 1,
     height: 1,
   },

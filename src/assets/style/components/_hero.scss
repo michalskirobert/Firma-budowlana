@@ -5,13 +5,13 @@
     .img__container {
       position: relative;
       width: 100%;
-      height: calc(100vh - 225px);
+      height: calc(100vh - 150px);
       overflow: hidden;
       background-color: transparent;
       img {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 225px);
+        height: calc(100vh - 150px);
         object-fit: cover;
         object-position: center center;
         transform: translateX(100%);
@@ -54,7 +54,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 225px);
+      height: calc(100vh - 150px);
       width: 100%;
       position: absolute;
       top: 0;

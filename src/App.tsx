@@ -1,5 +1,9 @@
 import React, { LazyExoticComponent, Suspense } from "react";
+
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { createBrowserHistory as history } from "history";
+
+import { CustomLoader } from "@components/shared/custom-loader";
 
 import { ROUTE_PATHS } from "./config/route";
 import { NavMenu } from "./components/layout/nav";
@@ -7,9 +11,9 @@ import { Footer } from "@components/layout/footer";
 
 const App = (): JSX.Element => {
   return (
-    <Router>
+    <Router {...{ history }}>
       <NavMenu />
-      <Suspense fallback={"Wczytywanie...."}>
+      <Suspense fallback={<CustomLoader />}>
         <Switch>
           {ROUTE_PATHS.map(
             (
