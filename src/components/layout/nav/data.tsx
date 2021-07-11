@@ -49,7 +49,7 @@ export const contactItems: readonly {
   },
   {
     name: C.EMAIL,
-    value: "contact@buraczynscy.pl",
+    value: "kontakt@buraczynscy.pl",
     icon: <AiFillMail />,
   },
 ]);

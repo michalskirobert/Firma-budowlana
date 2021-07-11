@@ -1,8 +1,6 @@
 import React from "react";
 
-import logo from "@assets/images/logo/logo.png";
-
-const PageNotFound = () => {
+const PageNotFound = (): JSX.Element => {
   return (
     <section className="not_found">
       <div className="background">
@@ -13,14 +11,15 @@ const PageNotFound = () => {
           <div className="inner-content">
             <h1 className="heading">404</h1>
             <p className="subheading">
-              Niestety podana strona nie została odnaleziona...
+              <span style={{ color: "orange" }}>Buraczyńscy</span> przepraszają,
+              ale niestety podana strona nie została odnaleziona...
             </p>
-            <a
+            <button
               onClick={() => window.open("/", "_self")}
               className="subheading link"
             >
               Powrót na stronę główną
-            </a>
+            </button>
           </div>
         </div>
         <div className="right-section">

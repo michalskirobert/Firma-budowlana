@@ -29,7 +29,7 @@ export const contactItems: readonly {
   },
   {
     title: "E-mail",
-    content: "contact@buraczynscy.pl",
+    content: "kontakt@buraczynscy.pl",
     icon: <AiOutlineMail {...{ style: styledIcons }} />,
   },
   {
@@ -48,18 +48,24 @@ export const contactInputsHelper: readonly {
   {
     name: "name",
     type: "text",
-    placeholder: "Np. Jan Kowalski",
+    placeholder: "Np. Jan Kowalski *",
     icon: <MdPerson {...{ style: contactIconsSize }} />,
   },
   {
     name: "email",
     type: "email",
-    placeholder: "Np. jan.kowalski@gmail.com",
+    placeholder: "Np. jan.kowalski@gmail.com *",
     icon: <AiOutlineMail {...{ style: contactIconsSize }} />,
+  },
+  {
+    name: "phone",
+    type: "tel",
+    placeholder: "Np. 555000555*",
+    icon: <AiFillPhone {...{ style: contactIconsSize }} />,
   },
   {
     name: "msg",
     type: "textarea",
-    placeholder: "Twoja wiadomość...",
+    placeholder: "Twoja wiadomość... *",
   },
 ]);

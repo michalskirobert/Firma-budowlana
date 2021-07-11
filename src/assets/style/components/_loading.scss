@@ -1,3 +1,12 @@
+@import "loaders.css/src/animations/ball-pulse-sync";
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
+}
+
 #cupcake {
   flex-direction: row;
   -webkit-flex-direction: row;
@@ -12,13 +21,16 @@
 }
 
 .letter {
-  font-size: 100px;
+  font-size: 2rem;
   color: #222;
   font-family: tahoma;
+  @media (min-width: 768px) {
+    font-size: 100px;
+  }
 }
 
 .box {
-  display: box;
+  display: flex;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -60,9 +72,13 @@
   -ms-align-items: center;
   justify-content: center;
   -ms-justify-content: center;
-  height: 100px;
-  width: 100px;
+  width: 25px;
+  height: 25px;
   background-color: #222;
+  @media (min-width: 768px) {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .cupcakeInner {

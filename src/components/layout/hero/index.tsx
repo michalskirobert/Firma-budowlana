@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import first from "@assets/images/hero/1.jpg";
 import second from "@assets/images/hero/2.jpg";
@@ -9,22 +9,22 @@ const Hero = (): JSX.Element => {
   const [index, setIndex] = React.useState(0);
   const data = [
     {
-      title: "",
-      subtitle: "",
+      title: "Remonty",
+      subtitle: "Wykończenia",
       imgURL: first,
-      content: "",
+      content: "Na zlecenia klienta",
       currentId: 1,
     },
     {
-      title: "",
-      subtitle: "",
+      title: "Armatury",
+      subtitle: "Montaż, wykończenia",
       imgURL: second,
       content: "",
       currentId: 2,
     },
     {
-      title: "",
-      subtitle: "",
+      title: "Montaże",
+      subtitle: "Drzwi, odpływ",
       imgURL: third,
       content: "",
       currentId: 3,
@@ -49,7 +49,7 @@ const Hero = (): JSX.Element => {
     return setIndex(id);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const slider = setInterval(() => {
       checkNumber(index + 1);
     }, 3000);
@@ -75,7 +75,7 @@ const Hero = (): JSX.Element => {
                 <div
                   className={`img__text ${index === idx ? "active" : "remove"}`}
                 >
-                  <h2 style={{ color: "#deb887" }}>{title}</h2>
+                  <h2>{title}</h2>
                   <h3>{subtitle}</h3>
                   <p>{content}</p>
                 </div>

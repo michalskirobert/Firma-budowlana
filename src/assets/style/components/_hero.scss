@@ -1,3 +1,5 @@
+@import "./../base/colors";
+
 .hero {
   position: relative;
   overflow-x: hidden;
@@ -30,16 +32,24 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: orange;
+        color: $crl-base;
         z-index: 1;
         transform: translateX(100%);
         opacity: 0;
+        h2 {
+          color: $crl-base;
+          font-size: 4rem;
+        }
+        h3 {
+          font-size: 1.8rem;
+          color: $crl-secondary;
+        }
         p {
-          color: orange;
+          color: $crl-white;
         }
         .hero-btn,
         .hero-btn a {
-          color: orange;
+          color: $crl-base;
         }
         &.active {
           animation: slideAppear 3s linear forwards;
@@ -60,7 +70,7 @@
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.6);
-      color: grey;
+      color: $crl-secondary;
       padding-top: 69px;
       .hero__item {
         height: 100%;
@@ -81,13 +91,13 @@
             height: 15px;
             width: 15px;
             margin: 0 5px;
-            background-color: grey;
+            background-color: $crl-secondary;
             border-radius: 50%;
             display: inline-block;
-            border: 1px solid orange;
+            border: 1px solid $crl-base;
             transition: background-color 0.6s ease;
             &.active {
-              background-color: orange;
+              background-color: $crl-base;
             }
           }
           @supports (-webkit-touch-callout: none) {
@@ -97,7 +107,7 @@
           }
           @media screen and (min-width: 1200px) {
             .dot:hover {
-              background-color: orange;
+              background-color: $crl-base;
             }
           }
         }

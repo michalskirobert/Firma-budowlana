@@ -103,12 +103,16 @@
   .link {
     text-align: center;
     line-height: 1.3em;
-    margin: 2rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.9rem 0;
     padding: 0;
     text-shadow: 0 0 1rem #fefefe;
     color: lightblue;
     cursor: pointer;
     transition: color 0.5s ease;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-decoration: underline;
     &:hover {
       text-shadow: none;
       color: red;

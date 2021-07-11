@@ -38,7 +38,7 @@ export const NavMenu = (): JSX.Element => {
                   marginRight: "15px",
                 }}
               >
-                <b>
+                <b style={{ marginRight: "5px" }}>
                   {icon} {name}:
                 </b>
                 <p>{value}</p>

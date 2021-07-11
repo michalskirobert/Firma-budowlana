@@ -43,6 +43,14 @@ export const ContactSection = styled.section`
   background-repear: no-reapeat;
   max-width: 100vw !important;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  @media (max-width: 1200px) {
+    min-height: calc(100vh + 100px);
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 `;
 
 export const Title = styled.h1`
