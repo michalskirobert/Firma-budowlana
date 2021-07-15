@@ -13,7 +13,6 @@ export const useHomepageContainer = (): {
   toggleDrainInstallationModal: () => void;
   INFO: readonly {
     title: string;
-    subtitle: string;
     content: string;
     button: string | null;
     imgURL: string;

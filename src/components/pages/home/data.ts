@@ -6,29 +6,25 @@ import * as CONSTANTS from "@utils/constants";
 
 export const INFO: readonly {
   title: string;
-  subtitle: string;
   content: string;
   button: string | null;
   imgURL: string;
 }[] = [
   {
     title: CONSTANTS.DOOR_INSTALLATION,
-    subtitle: "tekst",
-    content: "tekst",
+    content: `${CONSTANTS.DOOR_INSTALLATION_CONTENT.substr(0, 25)}...`,
     imgURL: doors,
     button: CONSTANTS.SEE_MORE,
   },
   {
     title: CONSTANTS.FITTINGS_INSTALLATION,
-    subtitle: "tekst",
-    content: "tekst",
+    content: `${CONSTANTS.FITTINGS_INSTALLATION_CONTENT.substr(0, 25)}...`,
     imgURL: sink,
     button: CONSTANTS.SEE_MORE,
   },
   {
     title: CONSTANTS.DRAIN_INSTALLATION,
-    subtitle: "tekst",
-    content: "tekst",
+    content: `${CONSTANTS.DRAIN_INSTALLATION_CONTENT.substr(0, 25)}...`,
     imgURL: toilet,
     button: CONSTANTS.SEE_MORE,
   },
