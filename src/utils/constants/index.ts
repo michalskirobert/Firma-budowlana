@@ -3,7 +3,7 @@ export const HOME_ROUTE = "/";
 export const ABOUT_ROUTE = "/about";
 export const CONTANCT_ROUTE = "/contact";
 export const GALLERY_ROUTE = "/gallery";
-export const OFFER_ROUTE = "/offer";
+export const OFFERS_ROUTE = "/offers";
 
 //Navigation
 export const HOMEPAGE = "Strona główna";

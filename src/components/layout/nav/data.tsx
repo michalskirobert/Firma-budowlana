@@ -22,7 +22,7 @@ export const navigationItems: readonly {
   },
   {
     name: C.OFFER,
-    link: C.OFFER_ROUTE,
+    link: C.OFFERS_ROUTE,
     icon: <MdLocalOffer />,
   },
   {
