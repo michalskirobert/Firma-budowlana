@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 import * as S from "./styles";
 
-export const SendingLoader = () => {
+export const SendingLoader = (): ReactElement => {
   return (
     <div>
       <S.SendingInfo>Wysyłanie wiadomości</S.SendingInfo>

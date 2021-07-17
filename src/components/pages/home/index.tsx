@@ -53,7 +53,7 @@ const Homepage = (): JSX.Element => {
           </p>
           <p>
             <Button
-              color="primary"
+              color="warning"
               {...{ onClick: () => history.push("/offers") }}
             >
               {CONSTANTS.SEE_MORE}

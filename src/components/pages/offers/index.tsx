@@ -1,8 +1,9 @@
 import React from "react";
 
-import * as CONSTANTS from "@utils/constants";
+import { CustomComparingPictures } from "@components/shared/custom-comparing-pictrues";
 
-import CoverPicture from "@assets/images/gallery/20210613_141509_HDR.jpg";
+import before from "@assets/images/compare/before.jpg";
+import after from "@assets/images/compare/after.jpg";
 
 import { OFFERS_HELER } from "../home/utils";
 
@@ -26,9 +27,10 @@ const OffersPage = (): JSX.Element => {
               <li>{offer}</li>
             ))}
           </ul>
+          <p>Ceny ustalamy indywidualnie do potrzeb.</p>
         </div>
         <div>
-          <img src={CoverPicture} alt={CONSTANTS.LOGO_TEXT} />
+          <CustomComparingPictures {...{ before, after }} />
         </div>
       </div>
     </section>

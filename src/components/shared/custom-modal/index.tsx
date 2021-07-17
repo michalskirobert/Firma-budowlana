@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 
+import { NShared } from "@namespace/shared";
+
 export const CustomModal = ({
   title,
   content,
@@ -8,14 +10,7 @@ export const CustomModal = ({
   isOpen,
   buttonContent,
   onAction,
-}: {
-  title: string;
-  content: string;
-  toggle: () => void;
-  isOpen: boolean;
-  buttonContent?: string;
-  onAction?: any;
-}): JSX.Element => {
+}: NShared.TCustomModalProps): JSX.Element => {
   return (
     <Modal {...{ isOpen, toggle, className: "custom-modal" }}>
       <ModalHeader>{title}</ModalHeader>

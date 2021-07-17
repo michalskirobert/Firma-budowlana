@@ -1,3 +1,4 @@
+import { NShared } from "@namespace/shared";
 import React, { ReactElement } from "react";
 
 import BlockUi from "react-block-ui";
@@ -8,11 +9,7 @@ export const CustomLoadingBlocker = ({
   children,
   isBlocking,
   isSending,
-}: {
-  children: React.ReactNode | React.ReactNode[];
-  isBlocking: boolean;
-  isSending?: boolean;
-}): ReactElement => (
+}: NShared.TCustomLoadingBlockerProps): ReactElement => (
   <BlockUi
     {...{
       tag: "div",
