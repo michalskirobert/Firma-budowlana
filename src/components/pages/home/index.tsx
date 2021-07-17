@@ -43,8 +43,8 @@ const Homepage = (): JSX.Element => {
           <h2 className="lead">{CONSTANTS.OFFER_HEADER}</h2>
           <hr className="my-2" />
           <ul className="offer">
-            {OFFERS_HELER.map((offer) => (
-              <li>{offer}</li>
+            {OFFERS_HELER.map((offer, idx: number) => (
+              <li key={idx}>{offer}</li>
             ))}
           </ul>
           <hr className="my-2" />
@@ -63,9 +63,9 @@ const Homepage = (): JSX.Element => {
       </section>
       <section>
         <CardGroup>
-          {INFO.map(({ title, content, button, imgURL }, index: number) => (
-            <>
-              <Card style={{ margin: "15px 15px 30px 15px" }} key={index}>
+          {INFO.map(({ title, content, button, imgURL }, idx: number) => (
+            <React.Fragment key={idx}>
+              <Card style={{ margin: "15px 15px 30px 15px" }}>
                 <CardImg
                   top
                   width="100%"
@@ -87,7 +87,7 @@ const Homepage = (): JSX.Element => {
                   </Button>
                 </CardBody>
               </Card>
-            </>
+            </React.Fragment>
           ))}
         </CardGroup>
       </section>
