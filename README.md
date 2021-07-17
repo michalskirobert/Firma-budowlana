@@ -1,3 +1,8 @@
+# About website
+
+This project has been done for the "Buraczyńscy" company.
+You can see project [here](https://buraczynscy.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
