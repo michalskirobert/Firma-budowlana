@@ -58,22 +58,21 @@ export const useCustomComparingPictruesContainer =
       if (width < 1200) {
         return;
       }
+      const containerRef = container.current;
+      containerRef?.addEventListener("mousemove", dragArrow);
 
-      container.current?.addEventListener("mousemove", dragArrow);
-
-      return () =>
-        container.current?.removeEventListener("mousemove", dragArrow);
+      return () => containerRef?.removeEventListener("mousemove", dragArrow);
     });
 
     useEffect(() => {
       if (width > 1200) {
         return;
       }
-
-      container.current?.addEventListener("touchmove", onTouchDragArrow);
+      const containerRef = container.current;
+      containerRef?.addEventListener("touchmove", onTouchDragArrow);
 
       return () =>
-        container.current?.removeEventListener("touchmove", onTouchDragArrow);
+        containerRef?.removeEventListener("touchmove", onTouchDragArrow);
     });
 
     useEffect(() => {
@@ -82,6 +81,7 @@ export const useCustomComparingPictruesContainer =
       }
 
       setBeforeImageWidth("50%");
+      // eslint-disable-next-line
     }, []);
 
     return { beforeImageWidth, sliderLeft, container };
